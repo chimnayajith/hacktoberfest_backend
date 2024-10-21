@@ -6,7 +6,7 @@ def send_attendee_welcome_email(attendee):
     subject = 'Thank You for Registering for Hacktoberfest 2024!'
     from_email = settings.EMAIL_HOST_USER
     recipient_list = [attendee.email]
-
+    cc_list = ['chinmayajith30@gmail.com','harigovindbiju@gmail.com']
     # Email content (HTML format)
     html_message = format_html(
         f"""
@@ -61,7 +61,7 @@ def send_attendee_welcome_email(attendee):
         """
     )
 
-    email = EmailMessage(subject, html_message, from_email, recipient_list)
+    email = EmailMessage(subject, html_message, from_email, recipient_list,cc_list)
     email.content_subtype = 'html'
 
     if attendee.qr_code:
