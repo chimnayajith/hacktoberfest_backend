@@ -83,12 +83,8 @@ WSGI_APPLICATION = 'attendance_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway', 
-        'USER': 'postgres',
-        'PASSWORD': 'YtAWbFEtFWuZrVqnNMLeUBRraDFGaAVT',  # Corresponds to POSTGRES_PASSWORD
-        'HOST': 'junction.proxy.rlwy.net',  # Corresponds to RAILWAY_PRIVATE_DOMAIN
-        'PORT': '35420',  # Corresponds to PGPORT
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
