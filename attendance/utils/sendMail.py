@@ -3,16 +3,16 @@ from django.conf import settings
 from django.utils.html import format_html
 
 def send_attendee_welcome_email(attendee):
-    subject = 'Thank You for Registering for Hacktoberfest 2024!'
+    subject = 'Thank You for Registering for Hacktoberfest 2025!'
     from_email = settings.EMAIL_HOST_USER
     recipient_list = [attendee.email]
-    cc_list = ['chinmayajith30@gmail.com','harigovindbiju@gmail.com']
+    cc_list = ["johnyohanskaria72@gmail.com"]
     # Email content (HTML format)
     html_message = format_html(
         f"""
         <p>Hey {attendee.name},</p>
         <p>
-            Thank you for registering for Hacktoberfest 2024, organized by amFOSS in association with GitHub. 
+            Thank you for registering for Hacktoberfest 2025, organized by amFOSS. 
             We're thrilled to have you join us for this one-day event where you'll make your first contribution 
             to open source and attend lightning talks from industry experts.
         </p>
@@ -23,9 +23,9 @@ def send_attendee_welcome_email(attendee):
 
         <h3>Details:</h3>
         <p><strong>Event:</strong> amFOSS Hacktoberfest</p>
-        <p><strong>Date:</strong> 22nd October 2024</p>
-        <p><strong>Time:</strong> 9:00 AM - 6:00 PM</p>
-        <p><strong>Venue:</strong> Amriteshwari Hall</p>
+        <p><strong>Date:</strong> 15th October 2025</p>
+        <p><strong>Time:</strong> 9:30 AM - 7:00 PM</p>
+        <p><strong>Venue:</strong> Acharya Hall</p>
 
         <p>
             To maximize the event's benefits, we urge you to bring your laptop along with your charger. Without it, 
@@ -41,22 +41,23 @@ def send_attendee_welcome_email(attendee):
             and contribute. You don't have to install Git Bash if you are using Linux or macOS.
         </p>
 
+        <h3>Join Our Telegram Group:</h3>
         <p>
-            <strong>Important</strong>: Please ensure that you have the <strong>QR code</strong> attached to this email ready at the entrance for check-in. Without it, you won’t be able to enter the venue.
+            Please join our Telegram group for important announcements and communication during the event:
+            <br><br>
+            <a href="https://t.me/+WVKDMrhOhWZiNjNl">https://t.me/+WVKDMrhOhWZiNjNl</a>
         </p>
 
         <p>
-            So, are you ready? As the last step, RSVP for the event at the link given below to confirm your participation. 
-            We look forward to your presence at the event!
+            <strong>Important</strong>: Please ensure that you have the <strong>QR code</strong> attached to this email ready at the entrance for check-in. Without it, you won't be able to enter the venue.
         </p>
-
-        <p><strong>Link:</strong> <a href="https://events.mlh.io/events/11765-amfoss-hacktoberfest-24">RSVP for Hacktoberfest</a></p>
-
+        <p>
+            We look forward to seeing you at the event and embarking on this exciting journey into open source together!
+        </p>
         <p>
             If you face any technical issues, feel free to reach out to us at:<br><br>
-            <a href="tel:+919497547035">WhatsApp</a> | <a href="http://t.me/Viserion_7">Telegram</a>
-            <br>Harigovind C B<br>
-            Organizer
+            <a href="tel:+916238699107">WhatsApp</a> | <a href="http://t.me/TheYearly">Telegram</a>
+            <br><br>Team amFOSS<br>
         </p>
         """
     )
