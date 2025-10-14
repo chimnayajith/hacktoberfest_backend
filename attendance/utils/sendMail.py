@@ -6,7 +6,7 @@ def send_attendee_welcome_email(attendee):
     subject = 'Thank You for Registering for Hacktoberfest 2025!'
     from_email = settings.EMAIL_HOST_USER
     recipient_list = [attendee.email]
-    cc_list = ["johnyohanskaria72@gmail.com"]
+    cc_list = ["johnyohanskaria72@gmail.com", "dandegani57@gmail.com"]
     # Email content (HTML format)
     html_message = format_html(
         f"""
@@ -56,7 +56,8 @@ def send_attendee_welcome_email(attendee):
         </p>
         <p>
             If you face any technical issues, feel free to reach out to us at:<br><br>
-            <a href="tel:+916238699107">WhatsApp</a> | <a href="http://t.me/TheYearly">Telegram</a>
+            <a href="tel:+916238699107">WhatsApp</a> | <a href="http://t.me/TheYearly">Telegram</a> | 
+            <a href="tel:+919392162823">WhatsApp (9392162823)</a> | <a href="https://t.me/gani905">Telegram (@gani905)</a>
             <br><br>Team amFOSS<br>
         </p>
         """
